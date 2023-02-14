@@ -120,6 +120,17 @@ https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/degub
 https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/dunia-sinema/index.html
 ```
 
+**Unifi Sports 1 : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/unifi-sports-1/index.html)**
+
+```url
+https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/unifi-sports-1/index.html
+```
+
+<hr>
+<br>
+
+#### Watch all TV channels on [LIVE TV MALAYSIA](https://zazerconer.github.io/live-tv-malaysia-with-player/tv-channel)
+
 <br>
 <hr>
 <br>
