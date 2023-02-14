@@ -1,0 +1,183 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    cursor: none;
+    user-select: none;
+    border: 0;
+    font-family: Rubik;
+}
+
+body {
+    background: #eeeeee;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    text-shadow: 1px 1px #fff;
+    background: #ECEFF1;
+    box-shadow: 0 2px 4px #546E7A;
+    z-index: 5;
+}
+
+/* Title page */
+.title {
+    position: absolute;
+    top: 25px;
+    left: 5vw;
+    font-size: x-large;
+    font-weight: bold;
+    color: #673AB7;
+}
+
+/* Logo page */
+.logo-tv {
+    position: absolute;
+    top: 0;
+    right: 5vw;
+    width: 75px;
+    border: 0;
+    background: transparent;
+}
+
+/* List */
+.list {
+    padding: 10px 0;
+    display: block;
+    background: transparent;
+    overflow: auto;
+    z-index: 1;
+}
+
+/* Title (Name of the list) */
+.title-list {
+    position: absolute;
+    right: 12vw;
+    font-size: x-large;
+    font-weight: bold;
+    color: #673AB7;
+    text-shadow: 1px 1px #fff;
+}
+
+/* Button Logo */
+.btn {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: transparent;
+    transition: .3s;
+}
+
+/* Image logo */
+.logo {
+    width: 170px;
+    border-radius: 8px;
+    border: 3px solid slateblue;
+    margin: 10px;
+    padding: 5px;
+    background: #fff;
+    box-shadow: 0 1px 3px #546E7A;
+}
+
+.logo:active {
+    opacity: 0.6;
+    z-index: 1;
+}
+
+/* Browser support */
+.support {
+    font-size: medium;
+    font-weight: 400;
+}
+
+.support button {
+    color: #673AB7;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-shadow: 0 1px #fff;
+    border-radius: 4px;
+}
+
+.support button:active {
+    opacity: 0.5;
+}
+
+/* Github */
+.github {
+    position: absolute;
+    left: 5vw;
+    font-size: small;
+    text-shadow: 0 1px #fff;
+    font-weight: 500;
+}
+
+.github a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Display browser details */
+#details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 460px;
+    max-height: 250px;
+    display: none;
+    align-items: center;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background: #eeeeee;
+    z-index: 10;
+}
+
+#details p {
+    color: #323232;
+    font-size: large;
+    font-weight: 500;
+    text-shadow: 0 1px #fff;
+}
+
+/* Close/hide container (Browser details) */
+#close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
+    display: none;
+    background: #000;
+    opacity: 0.7;
+    z-index: 8;
+}
+
+/* Change container width and height for small screens */
+@media screen and (max-width: 500px) {
+    #details {
+        max-width: 350px;
+        height: 200px;
+    }
+
+    #details p {
+        font-size: small;
+        font-weight: 600;
+    }
+}
