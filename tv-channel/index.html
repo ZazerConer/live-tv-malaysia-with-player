@@ -1,104 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="title" content="LIVE TV MALAYSIA">
-<meta name="description" content="Watch malaysia live tv channels">
-<meta name="keywords" content="live, tv, channel,">
-<meta name="robots" content="index, follow">
-<meta name="language" content="English">
-<meta name="author" content="ZazerConer's">
-<link rel="icon" href="image/icon/live-tv-channel-ico.webp" type="image/x-icon">
-<link rel="canonical" href="https://zazerconer.github.io/live-tv-malaysia-with-player/tv-channel">
-<link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="LIVE TV MALAYSIA">
+    <meta name="description" content="Watch malaysia live tv channels">
+    <meta name="keywords" content="live, tv, channel,">
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English">
+    <meta name="author" content="ZazerConer's">
+    <link rel="icon" href="image/icon/live-tv-channel-ico.webp" type="image/x-icon">
+    <link rel="canonical" href="https://zazerconer.github.io/live-tv-malaysia-with-player/tv-channel">
+    <title>LIVE TV MALAYSIA</title>
 
-<title>LIVE TV MALAYSIA</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-</head>
-<body>
+   <style>
+     *,.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]:focus{outline:0}#close,header{position:fixed}#close,#live,#title{top:1.5rem}#msg,.playlist{bottom:0;margin:auto}#msg,header{left:0;background:#111}#msg,video{display:none;overflow:hidden}*{margin:0;padding:0;box-sizing:border-box;border:0;cursor:none;user-select:none;-webkit-user-select:none}body,html{width:100%;height:100%;background:#121212}#live,#title{margin:auto;color:#e5e5e5;text-shadow:0 1px #111;z-index:200;position:absolute}video{width:100vw;height:100vh;object-fit:contain;background:#000;opacity:0}.live::-webkit-media-controls-panel{background:0 0;padding-right:10px;padding-left:10px}.live::-webkit-media-controls-current-time-display{display:none}.live::-webkit-media-controls-time-remaining-display{display:none}#live{left:1.5rem;font-size:medium;font-family:Verdana,Arial,sans-serif}#title{left:5rem;font-size:large;font-family:fantasy;font-style:italic;font-weight:500}.theme-blue .shaka-controls-button-panel .material-icons-round{color:#eee}.theme-blue .shaka-controls-button-panel button:hover.material-icons-round{color:#fff!important}.theme-blue input[type=range]::-webkit-slider-thumb{background:#fff;cursor:pointer}.theme-blue input[type=range]::-moz-range-thumb{background:#fff;cursor:pointer}.theme-blue input[type=range]::-ms-thumb{background:#fff;cursor:pointer}.theme-blue .shaka-play-button[icon=pause],.theme-blue .shaka-play-button[icon=play]{background-color:#4285f4}.theme-blue .shaka-overflow-menu,.theme-blue .shaka-settings-menu{background:#4285f4}.theme-blue .shaka-overflow-menu span+span{font-size:80%;color:#fff;padding-top:2px}.theme-blue .shaka-overflow-menu button:hover,.theme-blue .shaka-settings-menu button:hover{background:#3275e4;cursor:pointer}.theme-blue .shaka-overflow-menu button:hover label,.theme-blue .shaka-settings-menu button:hover label{cursor:pointer}.theme-blue .shaka-overflow-menu button:focus,.theme-blue .shaka-settings-menu button:focus{background:#3275e4;border:0;outline:0}.theme-blue .shaka-overflow-menu button,.theme-blue .shaka-settings-menu button{color:#fff}.theme-blue .shaka-captions-off{color:#bfbfbf}.theme-blue .shaka-controls-button-panel>button{margin:0;padding:0;background-color:#4285f4;width:40px;height:40px}.theme-blue .shaka-controls-button-panel>button.shaka-current-time{position:relative;left:10px;z-index:1000;color:#fff;background-color:transparent;height:auto!important;width:auto!important;font-size:12px}.theme-blue .shaka-bottom-controls{position:relative;-webkit-box-sizing:border-box;box-sizing:border-box;width:94%;padding-bottom:0;margin-bottom:3%}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel{position:absolute;width:100%;bottom:0;height:40px}.theme-blue .shaka-bottom-controls .shaka-seek-bar-container{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0 130px 0 40px;height:40px;border-radius:0}.theme-blue .shaka-bottom-controls .shaka-mute-button{z-index:1000;position:relative;width:50px}.theme-blue .shaka-bottom-controls .shaka-seek-bar{cursor:pointer;height:40px;opacity:0}.theme-blue .shaka-bottom-controls .shaka-small-play-button{-webkit-border-top-left-radius:4px;-webkit-border-bottom-left-radius:4px;-moz-border-radius-topleft:4px;-moz-border-radius-bottomleft:4px;border-top-left-radius:4px;border-bottom-left-radius:4px}.theme-blue .shaka-bottom-controls .shaka-overflow-menu-button{-webkit-border-top-right-radius:4px;-webkit-border-bottom-right-radius:4px;-moz-border-radius-topright:4px;-moz-border-radius-bottomright:4px;border-top-right-radius:4px;border-bottom-right-radius:4px}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container{z-index:10;left:0;opacity:0;width:0;-webkit-transition:width .2s cubic-bezier(.4, 0, 1, 1);transition:width .2s cubic-bezier(.4, 0, 1, 1);position:relative;height:40px;padding:0;margin:0;border-radius:0;will-change:width}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container:focus,.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container:hover{display:block;width:50px;opacity:1;padding:0}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container:before{position:absolute;content:'';width:100%;height:2px;left:-6px;top:50%;margin-top:-1px;background-color:rgba(255,255,255,.2)}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container .shaka-volume-bar{height:40px;top:0;border-radius:0}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]{-webkit-appearance:none;background:0 0;margin-top:0;border-radius:0!important;cursor:pointer}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:6px solid #fff;background:0 0;margin-top:0;border-radius:0!important}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]::-ms-track{-webkit-appearance:none;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:6px solid #fff;background:0 0;margin-top:0;border-radius:0!important}.theme-blue .shaka-bottom-controls .shaka-mute-button:hover+div{opacity:1;width:50px;padding:0}header{top:0;width:100%;padding:20px 5vw;display:flex;justify-content:space-between;z-index:100}.playlist,header h2{display:grid;align-items:center}header h2{color:#42a5f5;font-family:Rubik,sans-serif;font-weight:500}header .logo-channel{width:45px;padding:0;background:#eee}.logo-channel:hover{transform:scale(1)}.logo-channel:active{opacity:1}.playlist{position:absloute;top:0;left:0;right:0;padding-top:150px;padding-bottom:100px;max-width:80vw;min-height:100%;justify-content:center;text-align:center}#close,.click{padding:0;background:0 0}.click{color:#fff;margin:10px 5px}.msg,img{background:#fff}img{width:30vw;border-radius:5px;padding:5px;transition:.2s}img:hover{transform:scale(1.1)}img:active{opacity:.5}#close{display:none;right:2rem;z-index:300}#msg{postion:fixed;top:0;right:0;opacity:.9;align-items:center;justify-content:center;width:100%;height:100%;padding:0 35px;z-index:500}.msg{color:#212121;text-shadow:0 1px #fff;line-height:1.6;padding:30px;border-radius:8px}@media screen and (min-width:800px){.click{margin:15px}img{width:20vw}}
+   </style>
+    
+  </head>
+  <div id="msg"></div>
+  <body>
+  
+    <header>
+      <h2>LIVE TV MALAYSIA</h2>
+      <img class="logo-channel" src="https://iili.io/Hviqr0v.png" />
+    </header>
 
-<header>
-  <!-- Title page -->
-  <span class="title">LIVE TV MALAYSIA</span>
-  <!-- Logo page -->
-  <img class="logo-tv" src="image/logo/live-tv-channel.png">
-</header>
+    <div class="playlist">
+      <div>
+        <!-- RTM -->
+        <button class="click" link="https://d25tgymtnqzu8s.cloudfront.net/smil:tv1/manifest.mpd" title="TV1"></button>
+        <button class="click" link="https://d25tgymtnqzu8s.cloudfront.net/smil:tv2/manifest.mpd" title="TV2"></button>
+        <button class="click" link="https://d25tgymtnqzu8s.cloudfront.net/smil:tv6/manifest.mpd" title="TV6"></button>
+        <button class="click" link="https://d25tgymtnqzu8s.cloudfront.net/smil:okey/manifest.mpd" title="TV Okey"></button>
+        <button class="click" link="https://d25tgymtnqzu8s.cloudfront.net/smil:berita/manifest.mpd" title="Berita RTM"></button>
+        <button class="click" link="https://d25tgymtnqzu8s.cloudfront.net/smil:sukan/manifest.mpd" title="Sukan RTM"></button>
 
-<div>
-  <!-- Space at the top -->
-  <br><br><br><br><br><br>
+        <!-- Media Prima -->
+        <button class="click" link="https://unifi-live05.secureswiftcontent.com/UnifiHD/live03.mpd" title="TV3"></button>
+        <button class="click" link="https://unifi-live05.secureswiftcontent.com/UnifiHD/live06.mpd" title="Didik TV"></button>
+        <button class="click" link="https://unifi-live05.secureswiftcontent.com/UnifiHD/live08.mpd" title="8TV"></button>
+        <button class="click" link="https://unifi-live09.secureswiftcontent.com/UnifiHD/live09.mpd" title="TV9"></button>
 
-  <!-- Start list -->
-  <div class="list">
-     <span class="title-list">RTM</span>
-     <br><br><br><br>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/rtm/tv1'"><img class="logo" src="https://iili.io/HKGvkXa.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/rtm/tv2'"><img class="logo" src="https://iili.io/HKGvvLJ.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/rtm/tv6'"><img class="logo" src="https://iili.io/HKGvggp.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/rtm/tv-okey'"><img class="logo" src="https://iili.io/HKGvPet.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/rtm/berita-rtm'"><img class="logo" src="https://iili.io/HKGvV0Q.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/rtm/sukan-rtm'"><img class="logo" src="https://iili.io/HKGvezg.webp"></button>
-  </div>
+        <!-- Unifi TV -->
+        <button class="click" link="https://unifi-live05.secureswiftcontent.com/UnifiHD/live27.mpd" title="Dunia Sinema"></button>
+        <button class="click" link="https://unifi-live05.secureswiftcontent.com/UnifiHD/live29.mpd" title="Inspirasi"></button>
+        <button class="click" link="https://unifi-live05.secureswiftcontent.com/UnifiHD/live30.mpd" title="Sensasi"></button>
+        <button class="click" link="https://unifi-live05.secureswiftcontent.com/UnifiHD/live17.mpd" title="Degub"></button>
+        <button class="click" link="https://unifi-live05.secureswiftcontent.com/UnifiHD/live11.mpd" title="Unifi Sport 1"></button>
 
-  <br><br><br>
+        <!-- MyFreeView -->
+        <button class="click" link="https://linearjitp-playback.astro.com.my/dash-wv/linear/211/default_primary.mpd" title="Awesome TV"></button>
+        <button class="click" link="https://linearjitp-playback.astro.com.my/dash-wv/linear/5021/default.mpd" title="TVS"></button>
+        <button class="click" link="https://linearjitp-playback.astro.com.my/dash-wv/linear/1113/default_primary.mpd" title="TV AlHijrah"></button>
+      </div>
+    </div>
 
-  <div class="list">
-     <span class="title-list">Media Prima</span>
-     <br><br><br><br>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/media-prima/tv3'"><img class="logo" src="https://iili.io/HKGvU1R.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/media-prima/didik-tv'"><img class="logo" src="https://iili.io/HKGvWgV.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/media-prima/8tv'"><img class="logo" src="https://iili.io/HKGvMqx.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/media-prima/tv9'"><img class="logo" src="https://iili.io/HKGv67I.webp"></button>
-  </div>
+    <div id="player">
+      <button id="close"><svg fill="#ffffff" width="38px" height="38px" viewBox="-8.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><title>close</title><path d="M8.48 16l5.84-5.84c0.32-0.32 0.32-0.84 0-1.2-0.32-0.32-0.84-0.32-1.2 0l-5.84 5.84-5.84-5.84c-0.32-0.32-0.84-0.32-1.2 0-0.32 0.32-0.32 0.84 0 1.2l5.84 5.84-5.84 5.84c-0.32 0.32-0.32 0.84 0 1.2 0.16 0.16 0.4 0.24 0.6 0.24s0.44-0.080 0.6-0.24l5.84-5.84 5.84 5.84c0.16 0.16 0.36 0.24 0.6 0.24 0.2 0 0.44-0.080 0.6-0.24 0.32-0.32 0.32-0.84 0-1.2l-5.84-5.84z"></path></svg></button>
+      
+      <span id="title" style="display: none;"></span>
+      <span id="live" style="display: none;"></span>
+      <div class="theme-blue">
+        <video id="video" class="live video" data-shaka-player></video>
+      </div>
+    </div>
 
-  <br><br><br>
-
-  <div class="list">
-     <span class="title-list">Unifi TV</span>
-     <br><br><br><br>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/sensasi'"><img class="logo" src="https://iili.io/Hzldiut.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/inspirasi'"><img class="logo" src="https://iili.io/HzldDPf.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/degub'"><img class="logo" src="https://iili.io/Hzld48N.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/dunia-sinema'"><img class="logo" src="https://iili.io/HzldLtn.webp"></button>
-     <button class="btn" onclick="window.location.href='https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/unifi-sports-1'"><img class="logo" src="https://iili.io/HzlJ7zg.webp"></button>
-  </div>
-  <!-- End list -->
-
-  <!-- Space at the bottom -->
-  <br><br><br><br><br><br>
-  <br><br><br><br><br><br>
-
-  <!-- Browser support -->
-  <span class="support">Video player browser support : Chrome | Firefox | Edge &nbsp;<button onclick="document.getElementById('details').style.display='grid', document.getElementById('close').style.display='block';">Check Browser Here</button></span>
-
-  <!-- Close/hide container (Browser details) -->
-  <div id="close" onclick="document.getElementById('details').style.display='none', document.getElementById('close').style.display='none';"></div>
-  <!-- Display browser details -->
-  <div id="details">
-     <p id="browserInfo"></p><br>
-     <p id="operatingSystem"></p><br>
-     <p id="platform"></p>
-  </div>
-
-  <br><br><br><br><br>
-
-  <!-- Github -->
-  <span class="github">This page was created from <a href="https://github.com/ZazerConer/live-tv-malaysia-with-player" target="_blank">Github</a></span>
-  <br><br>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/2.11.0/bundled.js"></script>
-<script>
-  /* Detect browser info */
-  window.addEventListener("load", () => {
-  var result = bowser.getParser(navigator.userAgent).getResult();
-  document.getElementById("browserInfo").innerHTML = "Browser : " + result.browser.name + " " + result.browser.version;
-  document.getElementById("operatingSystem").innerHTML = "System : " + result.os.name + " " + result.os.version + " " + result.os.versionName;
-  document.getElementById("platform").innerHTML = "Platform : " + result.platform.type;
-  });
-</script>
-
-</body>
+   <script>
+     $(document).ready(function(){async function e(){let e=document.getElementById("video"),i=e.ui,o=i.getControls(),a=o.getPlayer();i.configure({seekBarColors:{base:"rgba(66, 133, 244, 0.35)",buffered:"rgba(66, 133, 244, 0.6)",played:"rgba(66, 133, 244, 0.8)"},volumeBarColors:{base:"rgba(66, 133, 244, 0.8)",level:"rgb(66, 133, 244)"}});let t=$("#video"),r=$("#player"),l=$(".playlist"),s=$("#title"),d=$("#live"),n=$("#close");hr=$("header"),a.load($("button.click:first").attr("link")),$(s).html($("button.click:first").attr("title")),$("button.click:first").addClass("playing"),$("button.click").on("click",function(e){e.preventDefault(),a.load($(this).attr("link")),$(s).html($(this).attr("title")),$(".playlist button").removeClass("playing"),$(this).addClass("playing"),$(t).css("opacity","1"),$(t).show(),$(r).show(),$(l).hide(),$(s).show(),$(d).hide(),$(n).show(),$(hr).hide(),$("#video").on("canplaythrough",function(){$(d).show(),$(d).html("<span style='color:crimson;'>&#x25cf;</span> LIVE")}),$("html,body").css("overflow","hidden"),setTimeout(function(){$(t).trigger("play")},1e3)}),$("#close").click(function(){$(l).show(),$(n).hide(),$(s).hide(),$(d).hide(),$(t).trigger("pause"),$(t).prop("currentTime",0),$("html,body").css("overflow","visible"),$(t).css("opacity","0"),$(t).hide(),$(r).hide(),$(hr).show()}),window.player=a,window.ui=i,window.controls=o,a.addEventListener("error",function e(i){c(event.detail)}),o.addEventListener("error",function e(i){c(event.detail)});try{console.log("The video has now been loaded!")}catch(p){c(p)}function c(e){console.error("Error code",e.code+":","Video could not be loaded!","[Media not found].")}a.configure({drm:{clearKeys:{"3afe30ee4ea24a67fe5a2ef06e83db0b":"27a2f71d87bf5eb105af096fb6605d97","47a1206b44822c89320e70916cf57b0c":"e040ca2aa426df789ba384ba561891b4",a9c619074ed38c20e25ad36c3c57c10c:"056e1e49573d2caee5cb4fe78f8c4f3d","1dfa8a645af41e83c520bddf913934ca":"65f6af8750d24b230d91b984237ac1e4","204b138b4cd494236687a016cf20a5a1":"5f06d6e71333355eb4b891b4d5f50975",b3838bf685aa8dba33086aa2369e0fe7:"9bf61620fcd6818d05e8858daab52ad5","1900d0fd8dfd2357ca2685c66628bf07":"e096e0a07989565b2fd434a8216e020d","91f3febaab6e15c9320279be25868aa1":"e096e0a07989565b2fd434a8216e020d",f84fbe826d15755ef91ebcab67c57d10:"6a136b65d2d45699cb1e98506dfa1bee",c3e956b38ae993be1494c7cfa17b1110:"55ccaee886b340dd901f4bf8dd9d3a6a","41a42fb5af457501c11bb9b158d5a110":"57a8d6f9e3832887db18ea6071118736"}}})}$("body").append('<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.min.js" integrity="sha512-PcrqA8ruG4/hkcvPjEFLflOoKQFaG31+vRHkWyr67AynKMMRPNpUKFjozkeCsJ4DDKTXncskRJUBJDz5Yzd3lg==" crossorigin="anonymous" referrerpolicy="no-referrer"></"+"script>'),$("body").append('<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.debug.min.js" integrity="sha512-yiqe/1B/Iq2gAeFqUyKQBSNJwhYZe582fUgvUZ3Xs52stgR2KqggbFDsL25lQVcvlZrA/6Kcaa25KC8wzDkiOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></"+"script>'),$("body").append('<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.ui.min.js" integrity="sha512-yWadmhjppIH5xkMu7w/Yg69pYgoLegRs0kbU37riKbWoBSYR8aAg7vHTrO1tYN8BitOsGKC3Ly1a/S9F3lUW/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></"+"script>'),$("body").append('<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.ui.debug.min.js" integrity="sha512-/YlF4lzbHKZTncnhfKj6oMYRSGTP0hKDGvlVuDtQB2Z/C54/dDYrtJ9KK5JmLRT4TnTYWJtMVDFQixUvmNt6Aw==" crossorigin="anonymous" referrerpolicy="no-referrer"></"+"script>'),$("body").append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/controls.min.css" integrity="sha512-6CAOpe+kF1fCTzRcZlS1iak5PY3M5lT+Ato5R3GJ0GXtoRTY6UOyGUNNG1va+mws+XDs1w3a6+iXQtw6n/Ef+w==" crossorigin="anonymous" referrerpolicy="no-referrer">'),$("body").append('<script src="https://cdnjs.cloudflare.com/ajax/libs/mux.js/5.11.3/mux.min.js" integrity="sha512-KUmFGcI2gA8j6VY9AsJJAD38lJoMq+Eay4GQPQb2MRm+ICDEKWKy8rXq7riHDFL/TJrhy4BIyY0xLmOTcn1Ppg==" crossorigin="anonymous" referrerpolicy="no-referrer"></"+"script>'),$("#player").hide(),$("video").attr({preload:"auto",playsinline:"true",poster:"https://i.imgur.com/zlzQwXY.jpg",controlsList:"nodownload noremoteplayback"});let i=document.getElementById("msg");$(i).on("click",function(){$(i).hide(230),$("header").show(),$("body").css("overflow","visible")}),document.addEventListener("shaka-ui-loaded",e),document.addEventListener("shaka-ui-load-failed",function e(o){console.error("Unable to load the UI library!"),$(i).css("display","grid"),$(i).html('<span class="msg">Before you continue, please note: <br> <b>This video player does not support this browser!</b> <br><br> Please use a supported browser. <br> e.g. <b>Chrome, FireFox, Edge, Safari, Opera</b> etc..</span>'),$(i).show(),$("header").hide(),$("body").css("overflow","hidden")}),document.addEventListener("DOMContentLoaded",function i(){shaka.polyfill.installAll(),shaka.Player.isBrowserSupported()?e():console.error("Browser not supported!")}),$("<img src='https://iili.io/HKGvkXa.webp' alt='logo'></img>").appendTo('[title="TV1"]'),$("<img src='https://iili.io/HKGvvLJ.webp' alt='logo'></img>").appendTo('[title="TV2"]'),$("<img src='https://iili.io/HKGvggp.webp' alt='logo'></img>").appendTo('[title="TV6"]'),$("<img src='https://iili.io/HKGvPet.webp' alt='logo'></img>").appendTo('[title="TV Okey"]'),$("<img src='https://iili.io/HKGvV0Q.webp' alt='logo'></img>").appendTo('[title="Berita RTM"]'),$("<img src='https://iili.io/HKGvezg.webp' alt='logo'></img>").appendTo('[title="Sukan RTM"]'),$("<img src='https://iili.io/HKGvU1R.webp' alt='logo'></img>").appendTo('[title="TV3"]'),$("<img src='https://iili.io/HKGvWgV.webp' alt='logo'></img>").appendTo('[title="Didik TV"]'),$("<img src='https://iili.io/HKGvMqx.webp' alt='logo'></img>").appendTo('[title="8TV"]'),$("<img src='https://iili.io/HKGv67I.webp' alt='logo'></img>").appendTo('[title="TV9"]'),$("<img src='https://iili.io/HzldLtn.webp' alt='logo'></img>").appendTo('[title="Dunia Sinema"]'),$("<img src='https://iili.io/HzldDPf.webp' alt='logo'></img>").appendTo('[title="Inspirasi"]'),$("<img src='https://iili.io/Hzldiut.webp' alt='logo'></img>").appendTo('[title="Sensasi"]'),$("<img src='https://iili.io/Hzld48N.webp' alt='logo'></img>").appendTo('[title="Degub"]'),$("<img src='https://iili.io/HzlJ7zg.webp' alt='logo'></img>").appendTo('[title="Unifi Sport 1"]'),$("<img src='https://iili.io/HKGvEsj.webp' alt='logo'></img>").appendTo('[title="Awesome TV"]'),$("<img src='https://iili.io/HvPSpcP.webp' alt='logo'></img>").appendTo('[title="TVS"]'),$("<img src='https://iili.io/HvPp2bR.webp' alt='logo'></img>").appendTo('[title="TV AlHijrah"]'),Object.defineProperty(navigator,"userAgent",{get:function(){return"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Firefox/112.0 Safari/605.1.15 Edg/112.0.1722.48 OPR/97.0.4719.17 Vivaldi/5.7.2921.68 YaBrowser/23.3.0 Yowser/2.5"}})});
+   </script>
+    
+  </body>
 </html>
