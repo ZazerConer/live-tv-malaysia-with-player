@@ -203,7 +203,7 @@ $("#player").load("http://url");
 ```
 <br>
 
-- **Full Code**
+- **Full code**
 <details><summary>Expand</summary>
   
 <br>
