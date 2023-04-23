@@ -130,6 +130,30 @@ https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/unifi
 
 <br>
 
+### MyFreeView
+
+<br>
+
+**Awesome TV : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/awesome-tv/index.html)**
+
+```url
+https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/awesome-tv/index.html
+```
+
+**TVS : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/tvs/index.html)**
+
+```url
+https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/tvs/index.html
+```
+
+**TV AlHijrah : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/tv-alhijrah/index.html)**
+
+```url
+https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/tv-alhijrah/index.html
+```
+
+<br>
+
 #### Watch all TV channels on : [LIVE TV MALAYSIA](https://zazerconer.github.io/live-tv-malaysia-with-player/tv-channel)
 
 <br>
