@@ -369,3 +369,145 @@ _Play button with Close button + Style CSS_
 </details>
 
 <br><br>
+
+<hr>
+
+### Add a URL Parameter to the embed player
+
+<br>
+
+- This code will automatically generate **URL parameters** for you.
+
+<br>
+
+**You can use the code listed below.**
+
+```js
+// JQuery
+$(window).ready(function () {
+   var path = "get";
+   var params = `?${
+     $.param({
+       ch: "channel-name"
+     })
+   }`;
+  $(window.history.replaceState(null, null, `${path}` + `${params}`));
+});
+```
+
+**Or**
+
+```js
+// JavaScript
+window.addEventListener("load", function () {
+   var path = "get";
+   var params = `?${
+     $.param({
+       ch: "channel-name"
+     })
+   }`;
+  window.history.replaceState(null, null, path + params);
+});
+```
+
+<br>
+
+**Output in the address bar:**
+
+- **Before:**
+
+`http://yoursite.com/your-embed-player/index.html`
+
+
+- **After:**
+
+`http://yoursite.com/your-embed-player/get?ch=channel-name`
+
+<br>
+
+### Add multiple parameters
+
+<br>
+
+```js
+// JQuery
+$(window).ready(function () {
+   var path = "get";
+   var params = `?${
+     $.param({
+       id: "123",
+       ch: "channel-name",
+       exp: "123456789"
+     })
+   }`;
+  $(window.history.replaceState(null, null, `${path}` + `${params}`));
+});
+```
+
+**Or**
+
+```js
+// JavaScript
+window.addEventListener("load", function () {
+   var path = "get";
+   var params = `?${
+     $.param({
+       id: "123",
+       ch: "channel-name",
+       exp: "123456789"
+     })
+   }`;
+  window.history.replaceState(null, null, path + params);
+});
+```
+
+<br>
+
+**Output:**
+
+`http://yoursite.com/your-embed-player/get?id=123&ch=channel-name&exp=123456789`
+
+<br>
+<hr>
+
+### Get the full URL with Parameters
+
+<br>
+
+```js
+ const 
+   protocol = window.location.protocol,
+   host = window.location.host,
+   pathname = window.location.pathname,
+   search = window.location.search,
+   uri = `${protocol}` + "//" + `${host}` + `${pathname}` + `${search}`;
+ window.console.log("Current URL: ", `${uri}`);
+```
+
+<br>
+
+Full code see in **[DEMO](https://zazerconer.github.io/live-tv-malaysia-with-player/demo/guwp/index.html)**
+
+<br>
+<hr>
+
+Place this code in each index file where you embed the Player and name it also in parameters according to the page you created.
+
+<br>
+
+**Note:** This is to protect your original **URL** link to the file if someone wants to embed it on their page. And the newly added URL of this **parameter** will not work and be useful to them at all. 
+
+You simply rename the `index.html` file to a name you like.
+
+**e.g.** `this-my-file.html`
+
+<br>
+<hr>
+<br>
+
+JQuery CDN:
+```url
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+```
+
+<br><br>
