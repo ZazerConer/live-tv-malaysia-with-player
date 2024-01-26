@@ -1,67 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TV Okey | RTM</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ShakaPlayer non-UI builds -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.min.js" integrity="sha512-PcrqA8ruG4/hkcvPjEFLflOoKQFaG31+vRHkWyr67AynKMMRPNpUKFjozkeCsJ4DDKTXncskRJUBJDz5Yzd3lg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.debug.min.js" integrity="sha512-yiqe/1B/Iq2gAeFqUyKQBSNJwhYZe582fUgvUZ3Xs52stgR2KqggbFDsL25lQVcvlZrA/6Kcaa25KC8wzDkiOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- ShakaPlayer UI builds -->
+  <title>TV Okey | RTM</title>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.ui.min.js" integrity="sha512-yWadmhjppIH5xkMu7w/Yg69pYgoLegRs0kbU37riKbWoBSYR8aAg7vHTrO1tYN8BitOsGKC3Ly1a/S9F3lUW/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.ui.debug.min.js" integrity="sha512-/YlF4lzbHKZTncnhfKj6oMYRSGTP0hKDGvlVuDtQB2Z/C54/dDYrtJ9KK5JmLRT4TnTYWJtMVDFQixUvmNt6Aw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- ShakaPlayer css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/controls.min.css" integrity="sha512-6CAOpe+kF1fCTzRcZlS1iak5PY3M5lT+Ato5R3GJ0GXtoRTY6UOyGUNNG1va+mws+XDs1w3a6+iXQtw6n/Ef+w==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <!-- ShakaPlayer HLS supported -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mux.js/5.11.3/mux.min.js" integrity="sha512-KUmFGcI2gA8j6VY9AsJJAD38lJoMq+Eay4GQPQb2MRm+ICDEKWKy8rXq7riHDFL/TJrhy4BIyY0xLmOTcn1Ppg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- JQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;outline:none;border:0;cursor:none;user-select:none;-webkit-user-select:none;}html,body{width:100%;height:100vh;background:#000;}#live,#title{margin:auto;color:#e5e5e5;text-shadow:0 1px #111;z-index:200;position:absolute}video{width:100vw;height:100vh;object-fit:contain;overflow:hidden}.live::-webkit-media-controls-panel{background:0 0;padding-right:10px;padding-left:10px}.live::-webkit-media-controls-current-time-display{display:none}.live::-webkit-media-controls-time-remaining-display{display:none}#live{top:1.5rem;right:2rem;font-size:medium;font-family:Verdana,Arial,sans-serif}#title{top:1.5rem;left:2rem;font-size:large;font-family:fantasy;font-style:italic;font-weight:500}.theme-blue .shaka-controls-button-panel .material-icons-round{color:#eee}.theme-blue .shaka-controls-button-panel button:hover.material-icons-round{color:#fff!important}.theme-blue input[type=range]::-webkit-slider-thumb{background:#fff;cursor:pointer}.theme-blue input[type=range]::-moz-range-thumb{background:#fff;cursor:pointer}.theme-blue input[type=range]::-ms-thumb{background:#fff;cursor:pointer}.theme-blue .shaka-play-button[icon=pause],.theme-blue .shaka-play-button[icon=play]{background-color:#4285f4}.theme-blue .shaka-overflow-menu,.theme-blue .shaka-settings-menu{background:#4285f4}.theme-blue .shaka-overflow-menu span+span{font-size:80%;color:#fff;padding-top:2px}.theme-blue .shaka-overflow-menu button:hover,.theme-blue .shaka-settings-menu button:hover{background:#3275e4;cursor:pointer}.theme-blue .shaka-overflow-menu button:hover label,.theme-blue .shaka-settings-menu button:hover label{cursor:pointer}.theme-blue .shaka-overflow-menu button:focus,.theme-blue .shaka-settings-menu button:focus{background:#3275e4;border:0;outline:0}.theme-blue .shaka-overflow-menu button,.theme-blue .shaka-settings-menu button{color:#fff}.theme-blue .shaka-captions-off{color:#bfbfbf}.theme-blue .shaka-controls-button-panel>button{margin:0;padding:0;background-color:#4285f4;width:40px;height:40px}.theme-blue .shaka-controls-button-panel>button.shaka-current-time{position:relative;left:10px;z-index:1000;color:#fff;background-color:transparent;height:auto!important;width:auto!important;font-size:12px}.theme-blue .shaka-bottom-controls{position:relative;-webkit-box-sizing:border-box;box-sizing:border-box;width:94%;padding-bottom:0;margin-bottom:3%}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel{position:absolute;width:100%;bottom:0;height:40px}.theme-blue .shaka-bottom-controls .shaka-seek-bar-container{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0 130px 0 40px;height:40px;border-radius:0}.theme-blue .shaka-bottom-controls .shaka-mute-button{z-index:1000;position:relative;width:50px}.theme-blue .shaka-bottom-controls .shaka-seek-bar{cursor:pointer;height:40px;opacity:0}.theme-blue .shaka-bottom-controls .shaka-small-play-button{-webkit-border-top-left-radius:4px;-webkit-border-bottom-left-radius:4px;-moz-border-radius-topleft:4px;-moz-border-radius-bottomleft:4px;border-top-left-radius:4px;border-bottom-left-radius:4px}.theme-blue .shaka-bottom-controls .shaka-overflow-menu-button{-webkit-border-top-right-radius:4px;-webkit-border-bottom-right-radius:4px;-moz-border-radius-topright:4px;-moz-border-radius-bottomright:4px;border-top-right-radius:4px;border-bottom-right-radius:4px}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container{z-index:10;left:0;opacity:0;width:0;-webkit-transition:width .2s cubic-bezier(.4, 0, 1, 1);transition:width .2s cubic-bezier(.4, 0, 1, 1);position:relative;height:40px;padding:0;margin:0;border-radius:0;will-change:width}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container:focus,.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container:hover{display:block;width:50px;opacity:1;padding:0}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container:before{position:absolute;content:'';width:100%;height:2px;left:-6px;top:50%;margin-top:-1px;background-color:rgba(255,255,255,.2)}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container .shaka-volume-bar{height:40px;top:0;border-radius:0}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]{-webkit-appearance:none;background:0 0;margin-top:0;border-radius:0!important;cursor:pointer}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]:focus{outline:0}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:6px solid #fff;background:0 0;margin-top:0;border-radius:0!important}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]::-ms-track{-webkit-appearance:none;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:6px solid #fff;background:0 0;margin-top:0;border-radius:0!important}.theme-blue .shaka-bottom-controls .shaka-mute-button:hover+div{opacity:1;width:50px;padding:0}
-</style>
+  <style>
+  *{margin:0;padding:0;box-sizing:border-box;outline:none;border:0;cursor:none;user-select:none;-webkit-user-select:none}html,body{width:100vw;height:100vh;background:#000;overflow:hidden}video{width:100vw;height:100vh;overflow:hidden}.live::-webkit-media-controls-panel{background:0 0;padding-right:10px;padding-left:10px}.live::-webkit-media-controls-current-time-display{display:none}.live::-webkit-media-controls-time-remaining-display{display:none}.theme-blue .shaka-controls-button-panel .material-icons-round{color:#eee}.theme-blue .shaka-controls-button-panel button:hover.material-icons-round{color:#fff!important}.theme-blue input[type=range]::-webkit-slider-thumb{background:#fff;cursor:pointer}.theme-blue input[type=range]::-moz-range-thumb{background:#fff;cursor:pointer}.theme-blue input[type=range]::-ms-thumb{background:#fff;cursor:pointer}.theme-blue .shaka-play-button[icon=pause],.theme-blue .shaka-play-button[icon=play]{background-color:#4285f4}.theme-blue .shaka-overflow-menu,.theme-blue .shaka-settings-menu{background:#4285f4}.theme-blue .shaka-overflow-menu span+span{font-size:80%;color:#fff;padding-top:2px}.theme-blue .shaka-overflow-menu button:hover,.theme-blue .shaka-settings-menu button:hover{background:#3275e4;cursor:pointer}.theme-blue .shaka-overflow-menu button:hover label,.theme-blue .shaka-settings-menu button:hover label{cursor:pointer}.theme-blue .shaka-overflow-menu button:focus,.theme-blue .shaka-settings-menu button:focus{background:#3275e4;border:0;outline:0}.theme-blue .shaka-overflow-menu button,.theme-blue .shaka-settings-menu button{color:#fff}.theme-blue .shaka-captions-off{color:#bfbfbf}.theme-blue .shaka-controls-button-panel>button{margin:0;padding:0;background-color:#4285f4;width:40px;height:40px}.theme-blue .shaka-controls-button-panel>button.shaka-current-time{position:relative;left:10px;z-index:1000;color:#fff;background-color:transparent;height:auto!important;width:auto!important;font-size:12px}.theme-blue .shaka-bottom-controls{position:relative;-webkit-box-sizing:border-box;box-sizing:border-box;width:94%;padding-bottom:0;margin-bottom:3%}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel{position:absolute;width:100%;bottom:0;height:40px}.theme-blue .shaka-bottom-controls .shaka-seek-bar-container{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0 130px 0 40px;height:40px;border-radius:0}.theme-blue .shaka-bottom-controls .shaka-mute-button{z-index:1000;position:relative;width:50px}.theme-blue .shaka-bottom-controls .shaka-seek-bar{cursor:pointer;height:40px;opacity:0}.theme-blue .shaka-bottom-controls .shaka-small-play-button{-webkit-border-top-left-radius:4px;-webkit-border-bottom-left-radius:4px;-moz-border-radius-topleft:4px;-moz-border-radius-bottomleft:4px;border-top-left-radius:4px;border-bottom-left-radius:4px}.theme-blue .shaka-bottom-controls .shaka-overflow-menu-button{-webkit-border-top-right-radius:4px;-webkit-border-bottom-right-radius:4px;-moz-border-radius-topright:4px;-moz-border-radius-bottomright:4px;border-top-right-radius:4px;border-bottom-right-radius:4px}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container{z-index:10;left:0;opacity:0;width:0;-webkit-transition:width .2s cubic-bezier(.4,0,1,1);transition:width .2s cubic-bezier(.4,0,1,1);position:relative;height:40px;padding:0;margin:0;border-radius:0;will-change:width}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container:focus,.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container:hover{display:block;width:50px;opacity:1;padding:0}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container:before{position:absolute;content:'';width:100%;height:2px;left:-6px;top:50%;margin-top:-1px;background-color:rgba(255,255,255,.2)}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container .shaka-volume-bar{height:40px;top:0;border-radius:0}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]{-webkit-appearance:none;background:0 0;margin-top:0;border-radius:0!important;cursor:pointer}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]:focus{outline:0}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:6px solid #fff;background:0 0;margin-top:0;border-radius:0!important}.theme-blue .shaka-bottom-controls .shaka-controls-button-panel .shaka-volume-bar-container input[type=range]::-ms-track{-webkit-appearance:none;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:6px solid #fff;background:0 0;margin-top:0;border-radius:0!important}.theme-blue .shaka-bottom-controls .shaka-mute-button:hover+div{opacity:1;width:50px;padding:0}
+  </style>
 
 </head>
 <body>
 
-  <span id="title"></span>
-  <span id="live"></span>
   <div class="theme-blue">
-    <video id="video" class="live video" data-shaka-player></video>
+    <video data-shaka-player id="video" autoplay="true" preload="auto" poster="https://i.imgur.com/zlzQwXY.jpg"></video>
   </div>
 
   <script>
-    const 
-      manifestUri = 'https://d25tgymtnqzu8s.cloudfront.net/smil:okey/manifest.mpd',
-    channel = 'TV Okey';
-
-    const
-      vid = document.getElementById("video"),
-     ch = document.getElementById("title");
-    cs = document.getElementById("live");
-
-    $(vid).ready(function() {
-      var completeloaded = false;
-      var vids = $("video");
-      vids.on("canplaythrough", function() {
-        $(ch).html(channel);
-        $(cs).html("<span style='color:crimson;'>&#x25cf;</span> LIVE");
-        setTimeout(function() {
-          $(vid).trigger("play");
-        }, 2500);
-        completeloaded = true;
-      });
-
-      $(vid).attr({
-        "autoplay": "true",
-        "preload": "auto",
-        "playsinline": "true",
-        "poster": "https://i.imgur.com/zlzQwXY.jpg",
-        "controlsList": "nodownload noremoteplayback"
-      });
-    });
+    const manifestUri = 'https://d25tgymtnqzu8s.cloudfront.net/smil:okey/manifest.mpd';
 
     function initApp() {
       shaka.polyfill.installAll();
@@ -134,14 +97,9 @@
     document.addEventListener('DOMContentLoaded', initApp);
 
     Object.defineProperty(navigator, 'userAgent', {
-      get: function() { // Latest update.
-        return 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Firefox/112.0 Safari/605.1.15 Edg/112.0.1722.48 OPR/97.0.4719.17 Vivaldi/5.7.2921.68 YaBrowser/23.3.0 Yowser/2.5';
+      get: function() { // Latest (Jan 27, 2024)
+        return 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Firefox/122.0 Edg/120.0.2210.160 OPR/106.0.0.0 Vivaldi/6.5.3206.57 YaBrowser/23.9.0.2325 Yowser/2.5';
       }
-
-      /** ShakaPlayer
-       * Does not support browsers.
-       * Internet Explorer (IE11) / Trident/7.0; rv:11.0
-       */
     });
   </script>
 
