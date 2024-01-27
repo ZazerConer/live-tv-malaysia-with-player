@@ -1,26 +1,9 @@
 <br>
 
-<div align="center"><strong>MALAYSIA LIVE TV CHANNELS WITH VIDEO PLAYER</strong></div>
+<div align="center"><strong>📺 MALAYSIA LIVE TV CHANNEL 📺</strong></div>
 
 <br>
 <hr>
-
-The **channel** URL is already available in the video player.
-
-This video player will play directly for you and you don't need to find a video player to load the **channel** URL.
-
-<br>
-
-Check out the TV channel player below.
-
-<hr>
-<br>
-
-**This TV channel has regional restrictions.**
-
-**_(Viewers for those in Malaysia only)_**
-
-<br>
 
 ### RTM
 
@@ -94,51 +77,9 @@ https://zazerconer.github.io/live-tv-malaysia-with-player/channel/media-prima/tv
 
 <br>
 
-### Unifi TV
-
-<br>
-
-**Sensasi : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/sensasi/index.html)**
-
-```url
-https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/sensasi/index.html
-```
-
-**Inspirasi : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/inspirasi/index.html)**
-
-```url
-https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/inspirasi/index.html
-```
-
-**Degub : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/degub/index.html)**
-
-```url
-https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/degub/index.html
-```
-
-**Dunia Sinema : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/dunia-sinema/index.html)**
-
-```url
-https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/dunia-sinema/index.html
-```
-
-**Unifi Sports 1 : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/unifi-sports-1/index.html)**
-
-```url
-https://zazerconer.github.io/live-tv-malaysia-with-player/channel/unifi-tv/unifi-sports-1/index.html
-```
-
-<br>
-
 ### MyFreeView
 
 <br>
-
-**Awesome TV : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/awesome-tv/index.html)**
-
-```url
-https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/awesome-tv/index.html
-```
 
 **TVS : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/tvs/index.html)**
 
@@ -146,368 +87,32 @@ https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/awe
 https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/tvs/index.html
 ```
 
-**TV AlHijrah : [Watch](https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/tv-alhijrah/index.html)**
-
-```url
-https://zazerconer.github.io/live-tv-malaysia-with-player/channel/myfreeview/tv-alhijrah/index.html
-```
-
-<br>
-
-#### Watch all TV channels on : [LIVE TV MALAYSIA](https://zazerconer.github.io/live-tv-malaysia-with-player/tv-channel)
-
-<br>
-<hr>
-
-This video player uses from **[ShakaPlayer](https://github.com/shaka-project/shaka-player)**
-
 <hr>
 <br>
 
-### Embed Video Player
+### Embed Player
 
-To embed a video player, the <code><iframe></code> embedder is not used, due to **media access** issues in blocked documents and does not allow the use of **_Shaka Player_** in <code><iframe></code>.
+<code><iframe></code>
+
+```js
+ <div style="position:relative;width:90%;padding-bottom:56.25%;display:block;margin:auto;">
+   <iframe
+     src="https://url"
+     width="100%" height="100%"
+     style="position:absolute;top:0;left:0;"
+     frameborder="0"
+     allow="fullscreen;autoplay;accelerometer;encrypted-media;gyroscope;picture-in-picture"
+     referrerpolicy="no-referrer">
+   </iframe>
+ </div> 
+```
 
 <hr>
-
-**How to solve this problem?**
-
-This method uses _JavaScript_ <code>load()</code>
-
-Load the player **_URL_** into the `<div>` tag element.
-
-- Example code below.
-
+<br>
 <br>
 
-To make this easier, use **_JQuery_** to load the player.
-
-```js
-$(element).load("http://url");
-```
+> [!WARNING]
+>
+> All above **TV channels** may not work or cannot be viewed in some regions.
 
 <br>
-
-#### There are 2 ways to load the player
-
-<br>
-
-**1. Load player in single page _(Autoload)_.**
-
-```html
-<div id="player"></div>
-```
-
-```js
-$("#player").load("http://url");
-```
-<br>
-
-- **Full code**
-<details><summary>Expand</summary>
-  
-<br>
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Load player in single page</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-</head>
-<body>
-
-  <!-- Load the video player -->
-  <div id="load-player"></div>
-
-<script>
- $(document).ready(function () {
-   // Get the id in the <div> tag.
-   const url = $("#load-player");
-
-   // Load the url player.
-   $(url).load("http://url");
-  // It is recommended to create a single page to use this method.
- });
-</script>
-
-</body>
-</html>
-```
-</details>
-
-<br><br>
-
-**2. Load player with ```<button>``` _(Manual load)_.**
-
-```html
-<div id="player"></div>  
-  
-<button>Load</button>
-```
-
-```js
-$(document).ready(function () {
-  const url = $("#player");
-
-  $("button").on("click", function (event) {
-    event.preventDefault();
-    $(url).load("http://url");
-  });
-});
-```
-<br>
-  
-- **Full code**
-<details><summary>Expand</summary>
-
-<br>
-  
-_Play button with Close button + Style CSS_
-
-<br>
-  
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Load player with button</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  
-<style>
-#btn {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   color: #fff;
-   font-size: xx-large;
-   font-weight: 500;
-   background: #1565c0;
-   padding: 10px 18px;
-   border: 0;
-   outline: none;
-   border-radius: 5px;
-}
-#btn:hover {
-   opacity: 0.7;
-}
-#close {
-   display: none;
-   position: fixed;
-   top: 5rem;
-   right: 2rem;
-   color: #fff;
-   font-size: medium;
-   font-weight: 500;
-   background: #333;
-   padding: 5px 10px;
-   border: 0;
-   outline: none;
-   border-radius: 4px;
-   z-index: 200;
-}
-</style>
-
-</head>
-<body>
-
-  <!-- Load the video player -->
-  <div id="load-player" style="display:none"></div>
-  
-  <!-- Play button -->
-  <button id="btn">PLAY</button>
-  
-  <!-- Close button -->
-  <button id="close">CLOSE</button>
-  
-<script>
-  $(document).ready(function () {
-   // Get the id in the <div> tag.
-   const url = $("#load-player");
-
-   // Hide the video first to prevent the video from
-   // showing on the screen before the player loads.
-   $("video").hide();
-
-   // Click on the play button.
-   $("#btn").on("click", function (event) {
-      event.preventDefault();
-      // Load the url player.
-      $(url).load("http://url");
-      $("#load-player").show();
-      // Set the html/body overflow to hidden after the player is displayed.
-      $("html,body").css("overflow", "hidden");
-      // Show/hide elements.
-      $("video").show();
-      $("#btn").hide();
-      // Show close button and play video after 1000ms (1s).
-      setTimeout(function () {
-         $("#close").show();
-         $("video").trigger("play");
-      }, 1000);
-   });
-
-   // Click the close button.
-   $("#close").on("click", function () {
-      // Reload the page to remove the url from (load player).
-      // It will hide the player.
-      $(window).attr("location", window.location.pathname);
-   });
- });
-</script>
-  
-</body>
-</html>
-```
-<br>
-
-**[DEMO](https://zazerconer.github.io/live-tv-malaysia-with-player/demo/load-player-with-button/index.html)**
-</details>
-
-<br><br>
-
-<hr>
-
-### Add a URL Parameter to the embed player
-
-<br>
-
-- This code will automatically generate **URL parameters** for you.
-
-<br>
-
-**You can use the code listed below.**
-
-```js
-// JQuery
-$(window).ready(function () {
-   var path = "get";
-   var params = `?${
-     $.param({
-       ch: "channel-name"
-     })
-   }`;
-  $(window.history.replaceState(null, null, `${path}` + `${params}`));
-});
-```
-
-**Or**
-
-```js
-// JavaScript
-window.addEventListener("load", function () {
-   var path = "get";
-   var params = `?${
-     $.param({
-       ch: "channel-name"
-     })
-   }`;
-  window.history.replaceState(null, null, path + params);
-});
-```
-
-<br>
-
-**Output in the address bar:**
-
-- **Before:**
-
-`http://yoursite.com/your-embed-player/index.html`
-
-
-- **After:**
-
-`http://yoursite.com/your-embed-player/get?ch=channel-name`
-
-<br>
-
-### Add multiple parameters
-
-<br>
-
-```js
-// JQuery
-$(window).ready(function () {
-   var path = "get";
-   var params = `?${
-     $.param({
-       id: "123",
-       ch: "channel-name",
-       exp: "123456789"
-     })
-   }`;
-  $(window.history.replaceState(null, null, `${path}` + `${params}`));
-});
-```
-
-**Or**
-
-```js
-// JavaScript
-window.addEventListener("load", function () {
-   var path = "get";
-   var params = `?${
-     $.param({
-       id: "123",
-       ch: "channel-name",
-       exp: "123456789"
-     })
-   }`;
-  window.history.replaceState(null, null, path + params);
-});
-```
-
-<br>
-
-**Output:**
-
-`http://yoursite.com/your-embed-player/get?id=123&ch=channel-name&exp=123456789`
-
-<br>
-<hr>
-
-### Get the full URL with Parameters
-
-<br>
-
-```js
- const 
-   protocol = window.location.protocol,
-   host = window.location.host,
-   pathname = window.location.pathname,
-   search = window.location.search,
-   uri = `${protocol}` + "//" + `${host}` + `${pathname}` + `${search}`;
- window.console.log("Current URL: ", `${uri}`);
-```
-
-<br>
-
-Full code see in **[DEMO](https://zazerconer.github.io/live-tv-malaysia-with-player/demo/guwp/index.html)**
-
-<br>
-<hr>
-
-Place this code in each index file where you embed the Player and name it also in parameters according to the page you created.
-
-<br>
-
-**Note:** This is to protect your original **URL** link to the file if someone wants to embed it on their page. And the newly added URL of this **parameter** will not work and be useful to them at all. 
-
-You simply rename the `index.html` file to a name you like.
-
-**e.g.** `this-my-file.html`
-
-<br>
-<hr>
-<br>
-
-JQuery CDN:
-```url
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-```
-
-<br><br>
