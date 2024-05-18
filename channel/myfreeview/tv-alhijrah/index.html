@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TV AlHijrah | MyFreeView</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shaka-player@4.7.7/dist/controls.css">
+  <script src="https://cdn.jsdelivr.net/npm/shaka-player@4.7.7/dist/shaka-player.ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/shaka-player@4.7.7/dist/shaka-player.ui.debug.js"></script>
+
+  <style>
+  *{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;outline:none;-webkit-border:0;-moz-border:0;border:0;cursor:none;-webkit-user-select:none;-moz-user-select:none;user-select:none;}html,body{width:100vw;width:100svw;height:100vh;height:100svh;background:#000;overflow:hidden;}video{width:100vw;width:100svw;height:100vh;height:100svh;overflow:hidden}.theme-blue .shaka-controls-button-panel .material-icons-round{color:#eee}.theme-blue .shaka-overflow-menu,.theme-blue .shaka-settings-menu{background:rgba(0,0,0,0.8);border-radius:4px;}.theme-blue .shaka-overflow-menu span+span{font-size:80%;color:#fff;padding-top:2px}.theme-blue .shaka-overflow-menu button,.theme-blue .shaka-settings-menu button{color:#fff;transition:all .2s linear;}.theme-blue .shaka-overflow-menu button:hover,.theme-blue .shaka-settings-menu button:hover{background:#3275e4;cursor:auto}
+  </style>
+
+</head>
+<body>
+
+  <div class="theme-blue">
+    <video data-shaka-player id="video" autoplay="true" preload="auto" poster="https://i.imgur.com/zlzQwXY.jpg"></video>
+  </div>
+
+  <script>
+    const manifestUri = 'https://linearjitp-playback.astro.com.my/dash-wv/linear/1113/default_primary.mpd';
+
+    function initApp() {
+      shaka.polyfill.installAll();
+      if (shaka.Player.isBrowserSupported()) {
+        init();
+      } else {
+        console.error('Browser not supported!');
+      }
+    }
+
+    async function init() {
+      const video = document.getElementById('video');
+      const ui = video['ui'];
+      const controls = ui.getControls();
+      const player = controls.getPlayer();
+      const config = {
+        'seekBarColors': {
+          base: 'rgba(66, 133, 244, 0.35)',
+          buffered: 'rgba(66, 133, 244, 0.6)',
+          played: 'rgba(66, 133, 244, 0.8)',
+        },
+        'volumeBarColors': {
+          base: 'rgba(66, 133, 244, 0.8)',
+          level: 'rgb(66, 133, 244)',
+        }
+      }
+      ui.configure(config);
+
+      window.player = player;
+      window.ui = ui;
+      window.controls = controls;
+
+      player.addEventListener("error", onPlayerErrorEvent);
+      controls.addEventListener("error", onUIErrorEvent);
+
+      try {
+        await player.load(manifestUri);
+        console.log('The video has now been loaded!');
+      } catch (error) {
+        onPlayerError(error);
+      }
+   
+      player.configure({
+        drm: {
+          clearKeys: {
+            '41a42fb5af457501c11bb9b158d5a110' : '57a8d6f9e3832887db18ea6071118736'
+          }
+        }
+      });
+
+      function onPlayerErrorEvent(errorEvent) {
+        onPlayerError(event.detail);
+      }
+
+      function onPlayerError(error) {
+        console.error('Error code', error.code + ':', 'Video could not be loaded!', '[Media not found].');
+      }
+
+      function onUIErrorEvent(errorEvent) {
+        onPlayerError(event.detail);
+      }
+    }
+
+    function initFailed(errorEvent) {
+      console.error('Unable to load the UI library!');
+    }
+
+    document.addEventListener('shaka-ui-loaded', init);
+    document.addEventListener('shaka-ui-load-failed', initFailed);
+    document.addEventListener('DOMContentLoaded', initApp);
+
+    Object.defineProperty(navigator, 'userAgent', {
+      get: function() { // Latest (May 18, 2024)
+        return 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Firefox/122.0 Edg/121.0.2277.112 OPR/107.0.0.0 UCBrowser/16.3.0.1281 Vivaldi/6.5.3206.63 YaBrowser/23.9.0.2325 Yowser/2.5 Safari/537.36';
+      }
+    });
+  </script>
+
+</body>
+</html>
